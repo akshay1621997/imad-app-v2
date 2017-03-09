@@ -18,7 +18,7 @@ app.get('/ui/madi.png', function (req, res) {
 });
  
 function hash (input){
-    var hashed=crypto.pbkdf2sync(input,salt,10000,512,'she512');
+    var hashed=crypto.pbkdf2sync(input,salt,10000,512,'sha512');
     return hashed.toString('hex');
 }
 
